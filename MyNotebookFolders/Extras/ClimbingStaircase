@@ -1,0 +1,19 @@
+def climb_stairs(n):
+    series = []
+    if n == 0:
+        return series
+    elif n == 1:
+        return 0
+    elif n == 2:
+        return 1
+    else:
+        series = [0,1,2]
+        for i in range (3,n+1):
+            series.append(series[i-1] + series[i-2])
+        return series[-1]
+
+
+
+
+
+print(climb_stairs(5))
